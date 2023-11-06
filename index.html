@@ -19,7 +19,7 @@ const map = new mapboxgl.Map({
 container: 'map',
 // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
 style: 'mapbox://styles/mapbox/light-v11',
-zoom: 13,
+zoom: 10,
 center: [30.314,59.938]
 });
  
@@ -31,7 +31,7 @@ map.addSource('mapillary', {
 //'https://raw.githubusercontent.com/nktb40/transmetrika_tiles/main/stop_43/{z}/{x}/{y}.mvt'
 'https://raw.githubusercontent.com/gammapopolam/electricity/main/tiles/{z}/{x}/{y}.mvt'
 ],
-'minzoom': 16,
+'minzoom': 14,
 'maxzoom': 18
 });
 
