@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Add a third party vector tile source</title>
+<title>LOOMelectricity</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="viewport" content="initial-scale=1">
     <meta property="og:title" content="Transit Vector Tile Service">
@@ -18,31 +18,8 @@ body { margin: 0; padding: 0; }
 <body>
 <div id="map"></div>
 <script>
-<<<<<<< HEAD
-	mapboxgl.accessToken = 'pk.eyJ1Ijoibmt0YiIsImEiOiJjazhscjEwanEwZmYyM25xbzVreWMyYTU1In0.dcztuEUgjlhgaalrc_KLMw';
-const map = new mapboxgl.Map({
-container: 'map',
-// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-style: 'mapbox://styles/mapbox/light-v11',
-zoom: 10,
-center: [30.314,59.938]
-});
- 
-map.on('load', () => {
-// Add a new vector tile source with ID 'mapillary'.
-map.addSource('mapillary', {
-'type': 'vector',
-'tiles': [
-//'https://raw.githubusercontent.com/nktb40/transmetrika_tiles/main/stop_43/{z}/{x}/{y}.mvt'
-'https://raw.githubusercontent.com/gammapopolam/electricity/main/tiles/{z}/{x}/{y}.mvt'
-],
-'minzoom': 10,
-'maxzoom': 18
-});
-=======
 const map = L.map('map');
 map.setView({lat: 59.938, lng: 30.314}, 10);
->>>>>>> db3ea4041 (update to leaflet)
 
 var baseLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
@@ -77,6 +54,7 @@ L.vectorGrid.protobuf("https://raw.githubusercontent.com/gammapopolam/electricit
         },
     }
 }).addTo(map);
+
 </script>
 </body>
 </html>
