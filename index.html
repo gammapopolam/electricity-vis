@@ -19,14 +19,14 @@ body { margin: 0; padding: 0; }
 <div id="map"></div>
 <script>
 const map = L.map('map');
-map.setView({lat: 59.938, lng: 30.314}, 10);
+map.setView({lat: 48.145, lng: 11.574}, 12);
 
 var baseLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
+    maxZoom: 17,
     opacity: 1
 }).addTo(map);
 
-L.vectorGrid.protobuf("https://raw.githubusercontent.com/gammapopolam/electricity/main/tiles/{z}/{x}/{y}.mvt", {
+L.vectorGrid.protobuf("https://loom.cs.uni-freiburg.de/tiles/subway-lightrail/orthorad/{z}/{x}/{y}.mvt", {
     vectorTileLayerStyles: {
         "lines": function(properties, zoom) {
             return {
@@ -53,7 +53,7 @@ L.vectorGrid.protobuf("https://raw.githubusercontent.com/gammapopolam/electricit
             }
         },
     }
-}).addTo(map);
+}).addTo(map);        	
 
 </script>
 </body>
