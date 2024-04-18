@@ -27,7 +27,7 @@ var baseLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     opacity: 1
 }).addTo(map);
 
-L.vectorGrid.protobuf("https://raw.githubusercontent.com/gammapopolam/electricity/main/tiles/{z}/{x}/{y}.mvt", {
+L.vectorGrid.protobuf("https://raw.githubusercontent.com/gammapopolam/electricity-vis/main/tiles/{z}/{x}/{y}.mvt", {
     vectorTileLayerStyles: {
         "lines": function(properties, zoom) {
             return {
